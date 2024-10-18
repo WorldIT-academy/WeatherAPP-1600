@@ -1,11 +1,12 @@
 import customtkinter as ctk
-from .read_json import read_json
+from ..json_functions.read_json import read_json
 
 dict = read_json(name_json= 'config.json')
 
 width = dict['main_frame']['width']
 height = dict['main_frame']['height']  
 title = dict['main_frame']['title']
+
 
 app = ctk.CTk(fg_color = 'black')
 app.geometry(f"{width}x{height}")
@@ -30,8 +31,9 @@ app.title(title)
 # button4.place(x = 125, y = 125)LOL
 
 frame = ctk.CTkScrollableFrame(app, width = 200 , height = height, fg_color= "green")
-frame.pack()
+frame.pack(side="left")
 button_list = []
+
 for number in range(1, 21):
     button = ctk.CTkButton(frame , text= f"button{number}")
     button.pack(padx = 20 , pady = 20)
