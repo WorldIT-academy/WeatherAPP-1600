@@ -8,7 +8,7 @@ api_dict = read_json(name_json = "config_api.json")
 API_KEY = api_dict["api_key"]
 CITY_NAME = api_dict["city_name"]
 
-url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}"
+url = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}&units=metric"
 
 response = requests.get(url)
 

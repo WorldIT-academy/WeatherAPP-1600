@@ -3,14 +3,14 @@ from ..json_functions.read_json import read_json
 
 dict = read_json(name_json= 'config.json')
 
-width = dict['main_frame']['width']
-height = dict['main_frame']['height']  
-title = dict['main_frame']['title']
+WIDTH = dict['main_frame']['width']
+HEIGHT = dict['main_frame']['height']  
+TITLE = dict['main_frame']['title']
 
 
-app = ctk.CTk(fg_color = 'black')
-app.geometry(f"{width}x{height}")
-app.title(title)
+app = ctk.CTk(fg_color = 'white')
+app.geometry(f"{WIDTH}x{HEIGHT}")
+app.title(TITLE)
 
 # label1 = ctk.CTkLabel(app, text = "label1", font=('Roboto', 50))
 # label1.grid(row = 0, column=0, padx = 20, pady = 40)
@@ -30,12 +30,12 @@ app.title(title)
 # button4 = ctk.CTkButton(app, text = "button 4")
 # button4.place(x = 125, y = 125)LOL
 
-frame = ctk.CTkScrollableFrame(app, width = 200 , height = height, fg_color= "green")
-frame.pack(side="left")
-button_list = []
+# frame = ctk.CTkScrollableFrame(app, width = 200 , height = height, fg_color= "green")
+# frame.pack(side="left")
+# button_list = []
 
-for number in range(1, 21):
-    button = ctk.CTkButton(frame , text= f"button{number}")
-    button.pack(padx = 20 , pady = 20)
-    button_list.append(button)
+# for number in range(1, 21):
+#     button = ctk.CTkButton(frame , text= f"button{number}")
+#     button.pack(padx = 20 , pady = 20)
+#     button_list.append(button)
 
