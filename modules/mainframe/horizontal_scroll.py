@@ -3,6 +3,8 @@ import requests
 from .main_frame import app
 from ..read_json import read_json
 import json
+from ..write_json import create_json
+
 
 class HorizontalScroll(ctk.CTkScrollableFrame):
     def __init__(self, child_master: object, child_width: int, child_height: int ,**kwargs):
@@ -29,13 +31,11 @@ class HorizontalScroll(ctk.CTkScrollableFrame):
         try:
             response = requests.get(URL)
             data = response.json()
-            json.dumps(data, indent=4)
-            print(json.dumps(data, indent= 4))
+            create_json(name_json = 'hourly_weather.json', data_dict = data)
             
-
         except requests.exceptions.RequestException as exeption:
             print(f"An error occurred: {exeption}")
-            
+             
         
 
 

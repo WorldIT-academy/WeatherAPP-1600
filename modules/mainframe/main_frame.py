@@ -13,11 +13,11 @@ app.title(title)
 
 
 
-frame = ctk.CTkScrollableFrame(app, width = 275 , height = height, fg_color= "#096C82")
-frame.pack(anchor = 'w')
-button_list = []
-for number in range(1, 21):
-    button = ctk.CTkButton(frame , text= f"button{number}")
-    button.pack(padx = 20 , pady = 20)
-    button_list.append(button)
+# frame = ctk.CTkScrollableFrame(app, width = 275 , height = height, fg_color= "#096C82")
+# frame.pack(anchor = 'w')
+# button_list = []
+# for number in range(1, 21):
+#     button = ctk.CTkButton(frame , text= f"button{number}")
+#     button.pack(padx = 20 , pady = 20)
+#     button_list.append(button)
 

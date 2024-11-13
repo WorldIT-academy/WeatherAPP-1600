@@ -1,5 +1,4 @@
 {
-
     "api_forecast" : "https://api.openweathermap.org/data/2.5/forecast?q={}&appid={}&units=metric&lang=uk&cnt=4",
     "api_key" : "f45b384d06f8d6558d2f50d57cd3220f"
 }
